@@ -6,9 +6,22 @@ Runtime在.Net中叫CLR，在Java中叫JRE。
 
 CLR提供以几个主要功能：
 - 基类库支持 Base Class Library Support
+  <br>
+  基类库支持即BCL，例如System.String、System.Int32等。
+
 - 内存管理 Memory Management
+  <br>
+  内存管理包括内存的释放和申请，例如.Net中创建一个对象会自动计算类型相关字段、类型对象指针和同步块索引占用的字节数，托管堆根据字节数分配内存，而不是像C/C++一样显式调用malloc申请一块内存区域。
+
 - 线程管理 Thread Management
+  <br>
+  .Net中的线程和操作系统线程是对应的关系，.Net对操作系统线程进行了封装，并[附带一些托管环境下所需要的数据](http://www.cnblogs.com/JeffreyZhao/archive/2009/07/22/thread-pool-1-the-goal-and-the-clr-thread-pool.html)。
+  另外，.Net会创建一个线程池来实现对线程的复用，以减少创建线程的开销。
+
 - 内存自动回收 Garbage Collection
+  <br>
+  .Net实现了托管资源的自动内存管理（垃圾回收）。
+
 - 安全性 Security
 - 类型检查 Type Checker
 - 异常管理 Exception Manager

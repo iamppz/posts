@@ -27,4 +27,10 @@ CLR提供以几个主要功能：
 - 异常管理 Exception Manager
 - 除错管理 Debug Engine
 - 中间码(MSIL)到机器码(Native)编译
+
 - 类装载 Class Loader
+  <br>
+  Class Loader 是用来加载类型、程序集和模块等的。并且，Class Loader 是按需加载的，起到降低系统资源占用和启动加速的作用。
+  JIT 在编译一个方法时会检查该方法引用的类型，Class Loader 就是在这个时候对程序集进行加载。
+  这里其实还涉及到一个 Class Loader 对程序集定位的问题， Class Loader 定位程序集有两种方式，一种是根据文件路径定位，另一种是根据程序集名称，后者有些复杂，有时间再具体整理。
+  
